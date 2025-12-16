@@ -16,12 +16,12 @@ const App: React.FC = () => {
     <div className="min-h-screen font-sans selection:bg-jungle-green selection:text-white bg-[url('https://www.transparenttextures.com/patterns/leaf.png')]">
       <NavBar />
 
-      {/* BANNER IMAGE - Edge to Edge */}
-      <div className="w-full pt-24">
+      {/* BANNER IMAGE - Edge to Edge with Frame */}
+      <div className="w-full mt-24 border-y-8 border-black bg-black shadow-[0_10px_20px_rgba(0,0,0,0.5)]">
         <img 
           src="https://pbs.twimg.com/media/G8U-68XXYAAQ6Xv?format=jpg&name=large" 
           alt="Sendor Banner" 
-          className="w-full h-[300px] md:h-[550px] object-cover object-center border-b-8 border-black shadow-2xl"
+          className="w-full h-auto block"
         />
       </div>
 
