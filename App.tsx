@@ -16,8 +16,17 @@ const App: React.FC = () => {
     <div className="min-h-screen font-sans selection:bg-jungle-green selection:text-white bg-[url('https://www.transparenttextures.com/patterns/leaf.png')]">
       <NavBar />
 
+      {/* BANNER IMAGE - Edge to Edge */}
+      <div className="w-full pt-24">
+        <img 
+          src="https://pbs.twimg.com/media/G8U-68XXYAAQ6Xv?format=jpg&name=large" 
+          alt="Sendor Banner" 
+          className="w-full h-[300px] md:h-[550px] object-cover object-center border-b-8 border-black shadow-2xl"
+        />
+      </div>
+
       {/* HERO SECTION */}
-      <section className="relative pt-40 pb-20 overflow-hidden bg-gradient-to-b from-white to-jungle-light">
+      <section className="relative pt-12 pb-20 overflow-hidden">
         
         {/* Decorative Vines/Leaves (CSS shapes) */}
         <div className="absolute top-20 left-0 w-32 h-32 bg-jungle-green opacity-20 rounded-br-full blur-xl"></div>
