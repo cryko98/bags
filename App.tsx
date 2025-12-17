@@ -11,6 +11,13 @@ const XLogo = ({ className }: { className?: string }) => (
   </svg>
 );
 
+// Telegram Logo Component
+const TelegramLogo = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" aria-hidden="true" className={className} fill="currentColor">
+    <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.892.179-.18 3.252-2.97 3.317-3.23.008-.032.01-.151-.056-.212s-.171-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
+  </svg>
+);
+
 const App: React.FC = () => {
   useEffect(() => {
     // Load Twitter widget script
@@ -310,9 +317,17 @@ const App: React.FC = () => {
             </p>
           </div>
           
-          <p className="text-jungle-green text-sm mt-8 font-bold tracking-widest uppercase">
-            © 2025 BIG ASS GORILLA SENDOR
-          </p>
+          <div className="flex flex-col items-center mt-8">
+            <p className="text-jungle-green text-sm font-bold tracking-widest uppercase mb-2">
+              © 2025 BIG ASS GORILLA SENDOR
+            </p>
+            <div className="flex items-center gap-2 text-jungle-green/60 text-xs font-bold uppercase tracking-widest">
+              <span>Web dev:</span>
+              <a href="https://t.me/Maximus00115" target="_blank" rel="noopener noreferrer" className="hover:text-jungle-green transition-colors" aria-label="Telegram">
+                <TelegramLogo className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
