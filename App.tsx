@@ -84,8 +84,8 @@ const App: React.FC = () => {
       {/* MARQUEE */}
       <div className="bg-jungle-green py-6 overflow-hidden border-y-4 border-black transform -rotate-1 scale-105 z-20 relative shadow-xl">
         <div className="whitespace-nowrap animate-[scroll_20s_linear_infinite] font-meme text-5xl text-white uppercase tracking-wider">
-          🦍 LAUNCHED ON BAGS.FM 🦍 VERIFIED CREATOR 🦍 SUPPORT THE JUNGLE 🦍 APES TOGETHER STRONG 🦍 BUY $BAGS 🦍 SENDOR SENDS 🦍
-          🦍 LAUNCHED ON BAGS.FM 🦍 VERIFIED CREATOR 🦍 SUPPORT THE JUNGLE 🦍 APES TOGETHER STRONG 🦍 BUY $BAGS 🦍 SENDOR SENDS 🦍
+          🦍 LAUNCHED ON BAGS.FM 🦍 VERIFIED CREATOR 🦍 SUPPORT THE JUNGLE 🦍 APES TOGETHER STRONG 🦍 BUY $BAG𝕊 🦍 SENDOR SENDS 🦍
+          🦍 LAUNCHED ON BAGS.FM 🦍 VERIFIED CREATOR 🦍 SUPPORT THE JUNGLE 🦍 APES TOGETHER STRONG 🦍 BUY $BAG𝕊 🦍 SENDOR SENDS 🦍
         </div>
       </div>
 
@@ -161,7 +161,7 @@ const App: React.FC = () => {
                   Bags.fm lets anyone fund their ideas with coins that anyone can trade.
                 </p>
                 <p>
-                  So Sendor smashed his keyboard and launched $BAGS. Now the whole jungle has a stake in his success.
+                  So Sendor smashed his keyboard and launched $BAG𝕊. Now the whole jungle has a stake in his success.
                   <strong className="text-jungle-green text-2xl block mt-4">Verified. Sustainable. Massive.</strong>
                 </p>
               </div>
@@ -249,7 +249,7 @@ const App: React.FC = () => {
           
           <div className="max-w-2xl mx-auto bg-black/30 p-6 rounded-xl border border-jungle-green/30 backdrop-blur-sm">
             <p className="text-gray-400 text-sm leading-relaxed">
-              <strong>DISCLAIMER:</strong> $BAGS is launched on Bags.fm. Sendor is a gorilla on the internet. 
+              <strong>DISCLAIMER:</strong> $BAG𝕊 is launched on Bags.fm. Sendor is a gorilla on the internet. 
               Gorillas eat paper hands. Do not risk money you need for actual bananas. 
               <br/>
               Crypto is a jungle, stay safe.

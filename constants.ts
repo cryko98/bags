@@ -1,6 +1,6 @@
 export const CA_ADDRESS = "5wyXSHTQZo5zh9E2Vos5uD89u3ZKrEYTZoSi52X4BAGS";
 export const TWITTER_LINK = "https://x.com/i/communities/2001099994607312951"; 
-export const BUY_LINK = "https://bags.fm"; // Updated to Bags.fm
+export const BUY_LINK = "https://bags.fm/5wyXSHTQZo5zh9E2Vos5uD89u3ZKrEYTZoSi52X4BAGS"; // Updated link
 
 export const IMAGES = {
     // Handsome silverback from SCMP

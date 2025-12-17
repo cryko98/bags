@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { BUY_LINK } from '../constants';
 
 const NavBar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,8 +16,8 @@ const NavBar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-24">
           <div className="flex-shrink-0 transform -rotate-2 hover:rotate-0 transition-transform">
-            <span className="font-meme text-5xl text-jungle-green text-shadow-hard tracking-wider cursor-pointer">
-              $BAGS
+            <span className="font-logo text-5xl text-jungle-green text-shadow-hard tracking-wider cursor-pointer">
+              $BAG𝕊
             </span>
           </div>
           
@@ -31,9 +32,9 @@ const NavBar: React.FC = () => {
                   {item.name}
                 </a>
               ))}
-              <button className="bg-jungle-green text-white px-8 py-3 rounded-xl font-meme text-xl hover:bg-black hover:scale-105 transition-all transform shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] border-2 border-black">
-                BUY $BAGS
-              </button>
+              <a href={BUY_LINK} target="_blank" rel="noopener noreferrer" className="bg-jungle-green text-white px-8 py-3 rounded-xl font-meme text-xl hover:bg-black hover:scale-105 transition-all transform shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] border-2 border-black">
+                BUY $BAG𝕊
+              </a>
             </div>
           </div>
 
