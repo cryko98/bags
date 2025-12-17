@@ -25,6 +25,60 @@ const App: React.FC = () => {
     };
   }, []);
 
+  const galleryItems = [
+    { 
+      img: IMAGES.GALLERY_1, 
+      title: "Wait for pump", 
+      desc: "Sendor meditating before the green candle appears." 
+    },
+    { 
+      img: IMAGES.GALLERY_2, 
+      title: "Verified Alpha", 
+      desc: "Checking his social verification status on Bags.fm" 
+    },
+    { 
+      img: IMAGES.GALLERY_3, 
+      title: "Bag Secured", 
+      desc: "When you earn fees just for having a good idea." 
+    },
+    { 
+      img: IMAGES.GALLERY_4, 
+      title: "Spinning The Bag", 
+      desc: "Washing away the FUD with pure gorilla energy." 
+    },
+    { 
+      img: IMAGES.GALLERY_5, 
+      title: "Green Candle", 
+      desc: "That look when the chart goes parabolic." 
+    },
+    { 
+      img: IMAGES.GALLERY_6, 
+      title: "Market Maker", 
+      desc: "Making noise in the order book like a boss." 
+    },
+    { 
+      img: IMAGES.GALLERY_7, 
+      title: "Heavy Holder", 
+      desc: "Eating dips for breakfast, lunch, and dinner." 
+    },
+    { 
+      img: IMAGES.GALLERY_8, 
+      title: "On My Way", 
+      desc: "Walking to the bank after the x100." 
+    },
+    { 
+      img: IMAGES.GALLERY_9, 
+      title: "Big Brain", 
+      desc: "Calculated entry. Zero emotion. 100% Ape." 
+    },
+  ];
+
+  // Helper to rotate background colors for cards
+  const getCardColor = (index: number) => {
+    const colors = ['bg-black', 'bg-jungle-green', 'bg-banana'];
+    return colors[index % 3];
+  };
+
   return (
     <div className="min-h-screen font-sans selection:bg-jungle-green selection:text-white bg-[url('https://www.transparenttextures.com/patterns/leaf.png')]">
       <NavBar />
@@ -214,42 +268,19 @@ const App: React.FC = () => {
             CAUGHT IN <span className="text-white text-stroke-green">4K</span>
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            {/* Card 1 */}
-            <div className="group relative">
-               <div className="absolute inset-0 bg-black transform translate-x-3 translate-y-3 rounded-2xl transition-transform group-hover:translate-x-4 group-hover:translate-y-4"></div>
-               <div className="relative bg-white p-4 rounded-2xl border-4 border-black h-full flex flex-col">
-                 <div className="overflow-hidden rounded-xl border-2 border-gray-200 mb-4 h-64">
-                    <img src={IMAGES.GALLERY_1} alt="Meme 1" className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-y-16 gap-x-10">
+            {galleryItems.map((item, index) => (
+              <div key={index} className={`group relative ${index % 3 === 1 ? 'md:-translate-y-12' : ''}`}>
+                 <div className={`absolute inset-0 ${getCardColor(index)} transform translate-x-3 translate-y-3 rounded-2xl transition-transform group-hover:translate-x-4 group-hover:translate-y-4`}></div>
+                 <div className="relative bg-white p-4 rounded-2xl border-4 border-black h-full flex flex-col">
+                   <div className="overflow-hidden rounded-xl border-2 border-gray-200 mb-4 h-64 bg-gray-100">
+                      <img src={item.img} alt={item.title} className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110" />
+                   </div>
+                   <h4 className="font-meme text-3xl text-jungle-green mb-2">{item.title}</h4>
+                   <p className="text-gray-600 font-bold">{item.desc}</p>
                  </div>
-                 <h4 className="font-meme text-3xl text-jungle-green mb-2">Wait for pump</h4>
-                 <p className="text-gray-600 font-bold">"Sendor meditating before the green candle appears."</p>
-               </div>
-            </div>
-
-            {/* Card 2 */}
-            <div className="group relative transform md:-translate-y-12">
-               <div className="absolute inset-0 bg-jungle-green transform translate-x-3 translate-y-3 rounded-2xl transition-transform group-hover:translate-x-4 group-hover:translate-y-4"></div>
-               <div className="relative bg-white p-4 rounded-2xl border-4 border-black h-full flex flex-col">
-                 <div className="overflow-hidden rounded-xl border-2 border-gray-200 mb-4 h-64">
-                    <img src={IMAGES.GALLERY_2} alt="Meme 2" className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110" />
-                 </div>
-                 <h4 className="font-meme text-3xl text-jungle-green mb-2">Verified Alpha</h4>
-                 <p className="text-gray-600 font-bold">"Checking his social verification status on Bags.fm"</p>
-               </div>
-            </div>
-
-            {/* Card 3 */}
-            <div className="group relative">
-               <div className="absolute inset-0 bg-banana transform translate-x-3 translate-y-3 rounded-2xl transition-transform group-hover:translate-x-4 group-hover:translate-y-4"></div>
-               <div className="relative bg-white p-4 rounded-2xl border-4 border-black h-full flex flex-col">
-                 <div className="overflow-hidden rounded-xl border-2 border-gray-200 mb-4 h-64">
-                    <img src={IMAGES.GALLERY_3} alt="Meme 3" className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110" />
-                 </div>
-                 <h4 className="font-meme text-3xl text-jungle-green mb-2">Bag Secured</h4>
-                 <p className="text-gray-600 font-bold">"When you earn fees just for having a good idea."</p>
-               </div>
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
