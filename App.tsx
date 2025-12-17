@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { ExternalLink, ShieldCheck, Zap, Globe, ArrowRight } from 'lucide-react';
 import NavBar from './components/NavBar';
 import ContractAddress from './components/ContractAddress';
@@ -12,6 +12,19 @@ const XLogo = ({ className }: { className?: string }) => (
 );
 
 const App: React.FC = () => {
+  useEffect(() => {
+    // Load Twitter widget script
+    const script = document.createElement("script");
+    script.src = "https://platform.twitter.com/widgets.js";
+    script.async = true;
+    script.charset = "utf-8";
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <div className="min-h-screen font-sans selection:bg-jungle-green selection:text-white bg-[url('https://www.transparenttextures.com/patterns/leaf.png')]">
       <NavBar />
@@ -61,7 +74,7 @@ const App: React.FC = () => {
 
           <ContractAddress />
 
-          <div className="relative mt-16 w-full max-w-2xl mx-auto group">
+          <div className="relative mt-16 w-full max-w-2xl mx-auto group mb-16">
             {/* Glow effect */}
             <div className="absolute -inset-4 bg-jungle-green rounded-[3rem] blur-xl opacity-30 group-hover:opacity-50 transition duration-500"></div>
             
@@ -78,6 +91,16 @@ const App: React.FC = () => {
               CREATOR POWER
             </div>
           </div>
+
+          {/* TWEET EMBED */}
+          <div className="w-full max-w-[550px] mx-auto relative z-20 px-4">
+             <div className="bg-white p-2 rounded-xl border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform rotate-1 hover:rotate-0 transition-all">
+                <blockquote className="twitter-tweet" data-dnt="true" data-theme="light">
+                  <a href="https://twitter.com/tisgambino/status/2001162293925830992"></a>
+                </blockquote>
+             </div>
+          </div>
+
         </div>
       </section>
 
